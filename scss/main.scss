@@ -1,0 +1,121 @@
+// VARIABLES //
+$primary-color: #d8315b;
+$secondary-color: #0A2463;
+
+// GENERAL //
+body {
+    font-family: 'Lato', sans-serif;
+    // font-family: 'Roboto', sans-serif;
+}
+.back-ground-sec {
+    background-color: $secondary-color;
+}
+
+// BUTTONS //
+.db-btn {
+    background-color: $primary-color;
+    color: #ffffff;
+    &:hover {
+        color: $primary-color;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+    }
+}
+
+// HEADER //
+.header-nav {
+    &--active  {
+        color: $primary-color !important;
+    }
+    &-link {
+        font-size: 18px;
+        &:hover {
+            color: $primary-color !important;
+        }
+    }
+}
+.header-bottom {
+    font-size: 20px;
+}
+
+// DASHBOARD SECTION //
+.welcome {
+    background-color: $primary-color;
+}
+.comment-sect-list {
+    background: rgba(216, 49, 91, 0.23);
+    border-radius: 10px;
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    @media only screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+    }   
+}
+.comment-sect-item {
+    border-radius: 10px;
+    & > img {
+        margin-right: 30px;
+        margin-bottom: 20px;
+    }
+    &-right {
+        display: grid;
+        grid-gap: 20px;
+        font-size: large;
+        @media only screen and (max-width: 410px) {
+            font-size: 16px;
+        }   
+    }
+}
+.comment-sect-details-name,
+.comment-sect-details-location {
+    @media only screen and (max-width: 410px) {
+        font-size: 13px;
+        font-weight: 600;
+    }
+} 
+.comment-sect-text {
+    color: #323E48;
+}
+.comment-sect-icons {
+    & img {
+        @media only screen and (max-width: 410px) {
+            width: 15px !important;
+        }
+    }
+    .comment-like,
+    .comment-dislike {
+        border: 3px solid rgba(10, 36, 99, 0.15);
+        border-radius: 30px;
+        font-weight: 500;
+        width: 70px;
+        height: 40px;
+    }
+}
+
+small {
+    color: #8F9298;
+}
+.comment-sect-buttons {
+    grid-column: 1 / span 2;
+    .db-btn {
+        @media only screen and (max-width: 410px) {
+            font-size: 14px;
+        }
+    }
+}
+// FOOTER //
+.footer {
+    @media only screen and (max-width: 510px) {
+        font-size: 14px;
+    }
+    &-top {
+        background-color: #0A2463;
+        
+    }
+    &-bottom {
+        background-color: #d8315b;
+        background-color: $primary-color;
+    }
+} 
